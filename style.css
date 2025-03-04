@@ -1,18 +1,17 @@
 html{
-    scroll-behavior:smooth;
+    scroll-behavior:smooth; /*reduces scrolling glitches*/
 }
 
 body {
     padding-left: 5%;
     padding-right:5%;
-    background-color: #ffffff;
   }
   
   h1 {
     font-size: 3em;
     color: #000000;
     font-family: Garamond;
-    text-align: center;
+    text-align:left;
     padding-top: 2%;
   }
 
@@ -29,8 +28,23 @@ body {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
   
-  div {border: 1px red solid;}
+#byline {
+    font-size: 1.02em;
+    padding-bottom: 15px
+  }
 
+#photocred {
+    font-size:.6em;
+    text-align: right
+}
+
+#caption { font-size:.8em}
+
+#transparency {font-size:.7em}
+
+
+ /*This is the div design for my photo gallery. The period before the words indicate that the action should be repeated. The photo container holds the photo with flexible height and automatically full-sized width for consistency. The subrows keep the caption connected to photo for easy organization and aesthetic purposes. The second column allows me to show two photos side-by-side, and the margin makes it so that the photos are not on top of each other. The grid duplicates infinitely as long as I keep adding photos. =*/
+  /*The row position being relative makes it more flexible to different image sizes. =*/
   .photocontainer { width: 100%; height: auto; margin: auto; padding:10px; }
 .row { height: 470px; margin-bottom: 20px; position: relative; }
 .row div { height: 100%; }
@@ -70,6 +84,7 @@ body {
   }
 
   .nav-button a {
+    display: inline-flex;
     font-size: 1.2em;
     color: rgb(164, 199, 6);
     text-decoration:none;
@@ -77,21 +92,31 @@ body {
     font-weight: bold;
     margin:auto;
   }
-
-  #nav-bar {
+ /*The navigation bar at the top of my website is carefully spaced so that the spaces between the buttons are equidistant on both a computer and phone. I did this through the "flex" buttons and carefully-decided padding*/
+  #nav-bar { 
+    flex-direction: row;
     display: flex;
     justify-content: space-between;
-    flex-direction: row;
     padding-left: 5%;
     padding-right: 5%;
-    position: sticky;
+    padding-top: 10%;
+    position: sticky; /*position of nav bar stays with user while user scrolls*/
+    top: 0;
+    z-index: 1; /*specifies stack order of buttons*/
   }
 
+   /*This media orientation makes it so that the content fits normally on an iphone vertically (portrait) by pre-adjusting the width, and shrinks the content a bit for the desktop view (2/3 of the width so it's not too wide).*/
   /*phone*/
   @media (orientation: portrait) {
     #content {
-      width: 100%;}
+      width: 100%}
     }
+     /*desktop*/
+     @media (orientation: landscape) {
+        #content {
+            width: 66%
+        }
+     }
 
 
-    /*this is my css comment*/
+   
