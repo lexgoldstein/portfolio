@@ -19,7 +19,7 @@ body {
     font-size: 1.5em;
     color:black;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    padding-top: 10px
+    padding-bottom: 20px
 }
 
   h3 {
@@ -46,7 +46,7 @@ body {
  /*This is the div design for my photo gallery. The period before the words indicate that the action should be repeated. The photo container holds the photo with flexible height and automatically full-sized width for consistency. The subrows keep the caption connected to photo for easy organization and aesthetic purposes. The second column allows me to show two photos side-by-side, and the margin makes it so that the photos are not on top of each other. The grid duplicates infinitely as long as I keep adding photos. =*/
   /*The row position being relative makes it more flexible to different image sizes. =*/
   .photocontainer { width: 100%; height: auto; margin: auto; padding:10px; }
-.row { height: 470px; margin-bottom: 20px; position: relative; }
+.row { height: 370px; margin-bottom: 15px; position: relative; }
 .row div { height: 100%; }
 .column-2 { width: 48%; }
 .left {float: left}
@@ -97,8 +97,6 @@ body {
     flex-direction: row;
     display: flex;
     justify-content: space-between;
-    padding-left: 5%;
-    padding-right: 5%;
     padding-top: 10%;
     position: sticky; /*position of nav bar stays with user while user scrolls*/
     top: 0;
